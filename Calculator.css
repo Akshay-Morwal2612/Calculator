@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #121212;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #1e1e1e;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  padding: 10px;
+  text-align: right;
+  background: #2c2c2c;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 12px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #2c2c2c;
+  color: #fff;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+button:hover {
+  background: #3a3a3a;
+}
+
+/* Click effect */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Operator buttons */
+button:nth-child(4n) {
+  background: #ff9500;
+  color: white;
+}
+
+button:nth-child(4n):hover {
+  background: #e08900;
+}
+
+/* Equal button */
+button:last-child {
+  background: #00c853;
+}
+
+button:last-child:hover {
+  background: #00b34a;
+}
+
+/* Zero button (double width) */
+.zero {
+  grid-column: span 2;
+}
